@@ -514,14 +514,14 @@
       overflow: auto; /* Aktifkan scroll jika konten modal terlalu panjang */
       background-color: rgba(0,0,0, 0.6); /* Overlay gelap */
       /* Gunakan flexbox untuk centering */
-      display: flex;
       justify-content: center;
       align-items: center;
   }
   
   /* Pastikan modal-container terlihat saat modal aktif */
-  .modal:not([style*="display: none"]) {
-      display: flex; /* Tampilkan sebagai flex saat aktif */
+  /* Aturan ini memastikan display: flex hanya aktif saat JS mengubah display dari none */
+  .modal[style*="display: flex"] {
+      display: flex;
   }
   
   
