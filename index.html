@@ -4,20 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kedai kopi aldo</title>
-    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- icon -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <!-- navbar start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">KENANGAN <span>MANTAN</span></a>
 
@@ -25,18 +21,31 @@
         <a href="#home">home</a>
         <a href="#about">about me</a>
         <a href="#menu">menu</a>
+        <a href="#products">Produk</a>
         <a href="#contact">contact</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="search-btn"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-btn"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
-    </nav>
-    <!-- navbar end/ -->
 
-    <!-- hero section -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box"><i data-feather="search"></i></label>
+       </div>
+       <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/produk/biji-kopi.jpg" alt="produk 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+       </div>
+       </nav>
     <section class="hero" id="home">
       <main class="content">
         <h1>secangkir kopi kenangan <span>MANTAN</span></h1>
@@ -47,8 +56,6 @@
         <a href="#" class="cta">beli sekarang</a>
       </main>
     </section>
-    <!-- hero end -->
-    <!-- about start -->
     <section id="about" class="about">
       <h2><span>About</span> Me</h2>
 
@@ -70,9 +77,6 @@
         </div>
       </div>
     </section>
-    <!-- about ent -->
-
-    <!-- menu start -->
     <section class="menu" id="menu">
       <h2><span>Menu</span> Kami</h2>
       <p>
@@ -102,9 +106,92 @@
         </div>
       </div>
     </section>
-    <!-- menu end -->
-
-    <!-- contact start -->
+    <section class="products" id="products">
+      <h2>Produk <span>Kami</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores, aperiam cum voluptatibus deleniti explicabo!</p>
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-btn" data-modal="item-detail-modal-kopi"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="/img/produk/biji-kopi.jpg" alt="product-1">
+          </div>
+          <div class="product-content">
+            <h3>kopi mentah 250gram</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 30K <span>IDR 50K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+             <a href="#" class="item-detail-btn" data-modal="item-detail-modal-coklat"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="/img/produk/coklat-dubai.jpg" alt="product-1">
+          </div>
+          <div class="product-content">
+            <h3>Coklat Dubai 250gram</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 25k <span>IDR 40k</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+             <a href="#" class="item-detail-btn" data-modal="item-detail-modal-minyak"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="/img/produk/minyak-wangi.jpg" alt="product-1">
+          </div>
+          <div class="product-content">
+            <h3>JaMalone 100ml</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 880K <span>IDR 999K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+             <a href="#" class="item-detail-btn" data-modal="item-detail-modal-puding"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="/img/produk/puding-matcha.jpg" alt="product-1">
+          </div>
+          <div class="product-content">
+            <h3>puding matcha 500gram</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 45k <span>IDR 65k</span></div>
+          </div>
+        </div>
+      </div>
+     </section>
     <section id="contact" class="contact">
       <h2><span>Contact</span> Me</h2>
       <p>
@@ -114,11 +201,11 @@
 
       <div class="row">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0630947283984!2d106.84264096955721!3d-6.4896928670823275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c1bdbc6cc197%3A0x3c4b33915fbbac37!2sJl.%20Kp.%20Kandang%2010%2C%20Pakansari%2C%20Kec.%20Cibinong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016915!5e0!3m2!1sid!2sid!4v1746871476931!5m2!1sid!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0630947283984!2d106.84264096955721!3d-6.4896928670823275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1r-full!3m3!1m2!1s0x2e69c1bdbc6cc197%3A0x3c4b33915fbbac37!2sJl.%20Kp.%20Kandang%2010%2C%20Pakansari%2C%20Kec.%20Cibinong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016915!5e0!3m2!1sid!2sid!4v1746871476931!5m2!1sid!2sid"
+          allowfullscre-full=""
+          loading="l-fully"
+          referrerpolfullcy="no-referrer-when-downgrade"
+          classstar-full="map"
         ></iframe>
 
         <form action="">
@@ -140,9 +227,6 @@
         </form>
       </div>
     </section>
-    <!-- contact end -->
-
-    <!-- footer start -->
     <footer>
       <div class="social">
         <a href="https://www.instagram.com/mhmdrfldo22/"><i data-feather="instagram"></i></a>
@@ -158,11 +242,96 @@
       </div>
       <div class="credit">
         <p>created by <a href="wa.me//+6288296759533">MUHAMAD <span>REFALDO</span>
-        </a>| &copy; 2025.</p>
+        </a>| © 2025.</p>
       </div>
     </footer>
-    <!-- footer end -->
-    <!-- icon -->
+    <div class="modal" id="item-detail-modal-kopi">
+      <div class="modal-container">
+          <a href="#" class="close-item"><i data-feather="x"></i></a>
+          <div class="modal-content">
+              <img src="/img/produk/biji-kopi.jpg" alt="product-1">
+              <div class="product-content">
+                  <h3>kopi mentah 250gram</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quia. Eligendi sint sequi labore? Eaque, dolore earum. Accusantium sit reprehenderit veritatis cupiditate quod illo quae?</p>
+                  <div class="product-stars">
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                  </div>
+                  <div class="product-price">IDR 30K <span>IDR 50K</span></div>
+                  <a href="#"><i data-feather="shopping-cart"></i><span>Add to cart</span></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="modal" id="item-detail-modal-coklat">
+      <div class="modal-container">
+          <a href="#" class="close-item"><i data-feather="x"></i></a>
+          <div class="modal-content">
+              <img src="/img/produk/coklat-dubai.jpg" alt="product-2">
+              <div class="product-content">
+                  <h3>Coklat Dubai 250gram</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, laudantium explicabo! Praesentium, libero ipsam.</p>
+                  <div class="product-stars">
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                  </div>
+                  <div class="product-price">IDR 25k <span>IDR 40k</span></div>
+                  <a href="#"><i data-feather="shopping-cart"></i><span>Add to cart</span></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="modal" id="item-detail-modal-minyak">
+      <div class="modal-container">
+          <a href="#" class="close-item"><i data-feather="x"></i></a>
+          <div class="modal-content">
+              <img src="/img/produk/minyak-wangi.jpg" alt="product-3">
+              <div class="product-content">
+                  <h3>JaMalone 100ml</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, laudantium explicabo! Praesentium, libero ipsam.</p>
+                  <div class="product-stars">
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                  </div>
+                  <div class="product-price">IDR 880K <span>IDR 999K</span></div>
+                  <a href="#"><i data-feather="shopping-cart"></i><span>Add to cart</span></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="modal" id="item-detail-modal-puding">
+      <div class="modal-container">
+          <a href="#" class="close-item"><i data-feather="x"></i></a>
+          <div class="modal-content">
+              <img src="/img/produk/puding-matcha.jpg" alt="product-4">
+              <div class="product-content">
+                  <h3>puding matcha 500gram</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, laudantium explicabo! Praesentium, libero ipsam.</p>
+                  <div class="product-stars">
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                      <i data-feather="star" class="star-full"></i>
+                  </div>
+                  <div class="product-price">IDR 45k <span>IDR 65k</span></div>
+                  <a href="#"><i data-feather="shopping-cart"></i><span>Add to cart</span></a>
+              </div>
+          </div>
+      </div>
+  </div>
     <script>
       feather.replace();
     </script>
