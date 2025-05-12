@@ -114,7 +114,7 @@ checkoutButton.addEventListener("click", function (e) {
   const objData = Object.fromEntries(data);
   const massage = formatMasage(objData);
   window.open(
-    "https://api.whatsapp.com/send/?phone=%2B6288296759533&text&type=phone_number&app_absent=0?text=" +
+    "https://wa.me/6288296759533?text=" +
       encodeURIComponent(massage)
   );
 });
