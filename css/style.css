@@ -1,193 +1,270 @@
 :root {
-    --primary: #b6895b;
-    --bg: #010101;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-  }
-  
-  html {
-      scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: "poppins", sans-serif;
-    background-color: var(--bg);
-    color: white;
-    /* min-height: 4000px; Hapus atau sesuaikan jika perlu */
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.4rem 7%;
-    background-color: rgba(1, 1, 1, 0.8);
-    border-bottom: 1px solid var(--primary);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-  }
-  
-  .navbar .navbar-logo {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #fff;
-  }
-  
-  .navbar .navbar-logo span {
-      color: var(--primary);
-      font-style: italic;
-  }
-  
-  .navbar .navbar-nav a {
-      color: white;
-      display: inline-block;
-      font-size: 1.3rem;
-      margin: 0 1rem;
-  }
-  
-  .navbar .navbar-nav a:hover {
-      color: var(--primary);
-  }
-  
-  .navbar .navbar-nav a::after {
-      content: '';
-      display: block;
-      padding-bottom: 0.5rem;
-      border-bottom: 0.1rem solid var(--primary);
-      transform: scaleX(0);
-      transition: 0.2s linear;
-  }
-  
-  .navbar .navbar-nav a:hover::after {
-      transform: scaleX(1);
-  }
-  
-  .navbar .navbar-extra a {
-      color: white;
-      margin: 0 0.5rem;
-  }
-  
-  .navbar .navbar-extra a:hover {
-      color: var(--primary);
-  }
-  
-  #hamburger-menu {
-      display: none;
-  }
-  
-  /* navbar search */
-  .navbar .search-form {
-      position: absolute;
-      top: 100%;
-      right: 7%;
-      background-color: white;
-      width: 50rem;
-      height: 5rem;
-      display: flex;
-      align-items: center;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: 0.5s;
-  }
-  
-  .navbar .search-form.active {
-      transform: scaleY(1);
-  }
-  
-  .navbar .search-form input {
-      height: 100%;
-      width: 100%;
-      font-size: 1.6rem;
-      color: var(--bg);
-      padding: 1rem;
-  }
-  
-  .navbar .search-form label {
-      cursor: pointer;
-      font-size: 2rem;
-      margin-right: 1.5rem;
-      color: var(--bg);
-  }
-  
-  /* shoping card */
-  .shopping-cart {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      height: 100vh;
-      width: 35rem;
-      padding: 0 1.5rem;
-      color: var(--primary); /* Warna teks di shopping cart */
-      background-color: white;
-      transition: 0.5s;
-      z-index: 9998; /* Pastikan di bawah navbar tapi di atas konten lain */
-  }
-  
-  .shopping-cart img {
-      height: 6rem;
-      border-radius: 50%;
-  }
-  
-  .shopping-cart .cart-item {
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed #666;
-      position: relative;
-      color: var(--bg); /* Warna teks item di shopping cart */
-  }
-  
-  .shopping-cart h3 {
-      font-size: 1.6rem;
-      padding-bottom: 0.5rem;
-      color: var(--bg); /* Warna judul item di shopping cart */
-  }
-  
-  .shopping-cart .item-price {
-      font-size: 1.2rem;
-      color: var(--bg); /* Warna harga item di shopping cart */
-  }
-  
-  .shopping-cart .remove-item {
-      position: absolute;
-      right: 1rem;
-      cursor: pointer;
-      color: var(--bg); /* Warna ikon remove */
-  }
-  
-  .shopping-cart .remove-item:hover {
-      color: var(--primary); /* Warna ikon remove saat hover */
-  }
-  
-  .shopping-cart.active {
-      right: 0;
-  }
-  
-  /* hero section */
-  .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background-image: url(../img/kopi-1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-  }
-  
-  .hero::after {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  /* min-height: 4000px; Hapus atau sesuaikan jika perlu */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* navbar search */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: white;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.5s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
+/* shoping card */
+
+#shopping-cart-btn {
+  position: relative;
+}
+
+#shopping-cart-btn .quantity-bradge {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: red;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  padding: 0 1.5rem;
+  color: var(--primary); /* Warna teks di shopping cart */
+  background-color: white;
+  transition: 0.5s;
+  z-index: 9998; /* Pastikan di bawah navbar tapi di atas konten lain */
+}
+
+.shopping-cart img {
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+  color: var(--bg); /* Warna teks item di shopping cart */
+}
+
+.shopping-cart h3 {
+  font-size: 1.4rem;
+  color: var(--bg); /* Warna judul item di shopping cart */
+}
+
+.shopping-cart .item-price {
+  font-size: 1.2rem;
+  color: var(--bg); /* Warna harga item di shopping cart */
+}
+
+.shopping-cart .cart-item #add,
+.shopping-cart .cart-item #remove {
+  display: inline-block;
+  padding: 2px 5px;
+  cursor: pointer;
+  margin: 0 8px;
+  background-color: #010101;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.shopping-cart h4 {
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  text-align: center;
+}
+
+/* co form */
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.form-container h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-container form {
+  width: 100%;
+  text-align: center;
+}
+
+.form-container label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.form-container span {
+  text-align: right;
+}
+
+.form-container input {
+  background-color: wheat;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.form-container .co-btn {
+  padding: 6px 14px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 2px;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.form-container .co-btn.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/hero-section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+
+/* .hero::after {
       content: '';
       display: block;
       position: absolute;
@@ -195,589 +272,580 @@
       height: 30%;
       bottom: 0;
       background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255, 255, 255, 0) 50%);
+  } */
+
+.hero .content {
+  padding: 1.4rem 7%;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 100px;
+}
+
+.hero .content h1 {
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: rgb(214, 197, 10);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 250;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* about section */
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* menu */
+.menu h2,
+.products h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.menu,
+.products,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.menu h2 span,
+.products h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.menu p,
+.products p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu-card {
+  text-align: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-tittle {
+  margin: 1rem auto 0.5rem;
+}
+
+/* produc */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icons a {
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icons a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-image img {
+  height: 25rem;
+}
+
+.products .product-content h3 {
+  font-size: 2rem;
+}
+
+.products .product-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* contact */
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: rgba(27, 182, 91, 0.869); /* Warna ikon sosial */
+  margin: 1rem;
+}
+
+footer .social a:hover,
+footer .links a:hover {
+  color: var(--bg);
+  transition: 0.5s;
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 900;
+}
+
+footer .credit a span {
+  color: aqua; /* Warna span di credit */
+}
+
+footer .credit a:hover {
+  color: green; /* Warna link credit saat hover */
+  transition: 0.5s;
+}
+
+footer .credit a span:hover {
+  color: blueviolet; /* Warna span di credit saat hover */
+  transition: 0.3s;
+}
+
+/* modal box */
+/* item detail */
+.modal {
+  display: none; /* Sembunyikan modal secara default */
+  position: fixed;
+  z-index: 9999; /* Pastikan di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Aktifkan scroll jika konten modal terlalu panjang */
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay gelap */
+  /* Gunakan flexbox untuk centering */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pastikan modal-container terlihat saat modal aktif */
+/* Aturan ini memastikan display: flex hanya aktif saat JS mengubah display dari none */
+.modal[style*="display: flex"] {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: auto; /* Centering */
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 90%; /* Lebar responsif */
+  max-width: 500px; /* Lebar maksimum */
+  border-radius: 10px; /* Tambahkan border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan shadow */
+  animation: animateModal 0.5s;
+}
+
+.modal-container .close-item {
+  position: absolute;
+  top: 1rem; /* Posisikan di pojok kanan atas */
+  right: 1rem;
+  font-size: 1.5rem; /* Ukuran ikon close */
+  color: #aaa; /* Warna ikon close */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-container .close-item:hover {
+  color: #777; /* Warna ikon close saat hover */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column; /* Susun konten secara vertikal di mobile */
+  align-items: center; /* Pusatkan konten */
+  text-align: center; /* Pusatkan teks */
+}
+
+.modal-content img {
+  height: 15rem;
+  margin-bottom: 1rem; /* Beri jarak bawah */
+  border-radius: 8px; /* Tambahkan border-radius pada gambar */
+  object-fit: cover; /* Pastikan gambar proporsional */
+}
+
+.modal-content .product-content {
+  padding: 0 1rem; /* Tambahkan padding */
+}
+
+.modal-content h3 {
+  font-size: 1.8rem; /* Ukuran judul produk */
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  font-size: 1rem; /* Ukuran teks deskripsi */
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555; /* Warna teks deskripsi */
+}
+
+.modal-content .product-stars {
+  font-size: 1.5rem; /* Ukuran bintang */
+  color: gold; /* Warna bintang */
+  margin-bottom: 1rem;
+}
+
+.modal-content .product-stars .star-full {
+  fill: gold; /* Isi bintang yang penuh */
+}
+
+.modal-content .product-price {
+  font-size: 1.2rem; /* Ukuran harga */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--bg);
+}
+
+.modal-content .product-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  color: #888; /* Warna harga coret */
+}
+
+.modal-content a {
+  /* Gaya untuk tombol 'Add to cart' di modal */
+  display: flex;
+  gap: 0.5rem; /* Kurangi jarak ikon dan teks */
+  align-items: center; /* Pusatkan ikon dan teks */
+  justify-content: center; /* Pusatkan konten tombol */
+  width: auto; /* Lebar otomatis sesuai konten */
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.8rem 1.5rem; /* Sesuaikan padding */
+  border-radius: 5px; /* Tambahkan border-radius */
+  transition: 0.3s;
+}
+
+.modal-content a:hover {
+  background-color: #a0784c; /* Warna hover */
+}
+
+/* modal animation */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
   }
-  
-  .hero .content {
-      padding: 1rem
+
+  to {
+    top: 0;
+    opacity: 1;
   }
-  
-  .hero .content h1 {
-      font-size: 3.5em;
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(1,1,3, 0.5);
-      line-height: 1.2;
+}
+
+/* media queriies */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
   }
-  
-  .hero .content h1 span {
-      color: rgb(214, 197, 10);
-  }
-  
-  .hero .content p {
-      font-size: 1.6rem;
-      margin-top: 1rem;
-      line-height: 1.4;
-      font-weight: 250;
-      mix-blend-mode: difference;
-  }
-  
-  .hero .content .cta {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 1rem 3rem;
-      font-size: 1.4rem;
-      color: #fff;
-      background-color: var(--primary);
-      border-radius: 0.5rem;
-      box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-  }
-  
-  /* about section */
-  .about {
-      padding: 8rem 7% 1.4rem;
-  }
-  
-  .about h2{
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 3rem;
-  }
-  
-  .about h2 span {
-      color: var(--primary);
-  }
-  
-  .about .row {
-      display: flex;
-  }
-  
-  .about .row .about-img {
-      flex: 1 1 45rem;
-  }
-  
-  .about .row .about-img img {
-      width: 100%;
-  }
-  
-  .about .row .content {
-      flex: 1 1 35rem;
-      padding: 0 1rem;
-  }
-  
-  .about .row .content h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-  }
-  
-  .about .row .content p {
-      margin-bottom: 0.8rem;
-      font-size: 1.4rem;
-      font-weight: 100;
-      line-height: 1.6;
-  }
-  
-  /* menu */
-  .menu h2,
-  .products h2,
-  .contact h2 {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
-  }
-  
-  .menu,
-  .products,
-  .contact {
-      padding: 8rem 7% 1.4rem;
-  }
-  
-  .menu h2 span,
-  .products h2 span,
-  .contact h2 span {
-      color: var(--primary);
-  }
-  
-  .menu p,
-  .products p,
-  .contact p {
-      text-align: center;
-      max-width: 30rem;
-      margin: auto;
-      font-weight: 100;
-      line-height: 1.6;
-  }
-  
-  .menu .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 5rem;
-      justify-content: center;
-  }
-  
-  .menu-card {
-      text-align: center;
-  }
-  
-  .menu .row .menu-card {
-      text-align: center;
-      padding-bottom: 4rem;
-  }
-  
-  .menu .row .menu-card img {
-      border-radius: 50%;
-      width: 80%;
-  }
-  
-  .menu .row .menu-card .menu-card-tittle {
-      margin: 1rem auto 0.5rem;
-  }
-  
-  /* produc */
-  .products .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-      gap: 1.5rem;
-      margin-top: 4rem;
-  }
-  
-  .products .product-card {
-      text-align: center;
-      border: 1px solid #666;
-      padding: 2rem;
-  }
-  
-  .products .product-icons {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-  }
-  
-  .products .product-icons a {
-      width: 4rem;
-      height: 4rem;
-      color: #fff;
-      margin: 0.3rem;
-      border: 1px solid #666;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .products .product-icons a:hover {
-      background-color: var(--primary);
-      border: 1px solid var(--primary);
-  }
-  
-  .products .product-image img {
-      height: 25rem;
-  }
-  
-  .products .product-content h3 {
-      font-size: 2rem;
-  }
-  
-  .products .product-stars {
-      font-size: 1.7rem;
-      padding: 0.8rem;
-      color: var(--primary);
-  }
-  
-  .products .product-stars .star-full {
-      fill: var(--primary);
-  
-  }
-  
-  .products .product-price {
-      font-size: 1.3rem;
-      font-weight: bold;
-  }
-  
-  .products .product-price span {
-      text-decoration: line-through;
-      font-weight: lighter;
-      font-size: 1rem;
-  }
-  
-  /* contact */
-  
-  .contact .row {
-      display: flex;
-      margin-top: 2rem;
-      background-color: #222;
-  }
-  
-  .contact .row .map {
-      flex: 1 1 45rem;
-      width: 100%;
-      object-fit: cover;
-  }
-  
-  .contact .row form {
-      flex: 1 1 45rem;
-      padding: 5rem 2rem;
-      text-align: center;
-  }
-  
-  .contact .row form .input-group {
-      display: flex;
-      align-items: center;
-      margin-top: 2rem;
-      background-color: var(--bg);
-      border: 1px solid #eee;
-      padding-left: 2rem;
-  }
-  
-  .contact .row form .input-group input {
-      width: 100%;
-      padding: 2rem;
-      font-size: 1.7rem;
-      background: none;
-      color: #fff;
-  }
-  
-  .contact .row form .btn {
-      margin-top: 3rem;
-      display: inline-block;
-      padding: 1rem 3rem;
-      font-size: 1.7rem;
-      color: #fff;
-      background-color: var(--primary);
-      cursor: pointer;
-  }
-  
-  /* footer */
-  
-  footer {
-      background-color: var(--primary);
-      text-align: center;
-      padding: 1rem 0 3rem;
-      margin-top: 3rem;
-  }
-  
-  footer .social {
-      padding: 1rem 0;
-  }
-  
-  footer .social a {
-      color: rgba(27, 182, 91, 0.869); /* Warna ikon sosial */
-      margin: 1rem;
-  }
-  
-  footer .social a:hover,
-  footer .links a:hover {
-      color: var(--bg);
-      transition: 0.5s;
-  }
-  
-  footer .links a {
-      color: white;
-      padding: 0.7rem 1rem;
-  }
-  
-  footer .links {
-      margin-bottom: 1.4rem;
-  }
-  
-  footer .credit {
-      font-size: 0.8rem;
-  }
-  
-  footer .credit a {
-      color: var(--bg);
-      font-weight: 900;
-  }
-  
-  footer .credit a span {
-      color: aqua; /* Warna span di credit */
-  }
-  
-  footer .credit a:hover {
-      color: green; /* Warna link credit saat hover */
-      transition: 0.5s;
-  }
-  
-  footer .credit a span:hover {
-      color: blueviolet; /* Warna span di credit saat hover */
-      transition: 0.3s;
-  }
-  
-  /* modal box */
-  /* item detail */
-  .modal {
-      display: none; /* Sembunyikan modal secara default */
-      position: fixed;
-      z-index: 9999; /* Pastikan di atas elemen lain */
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto; /* Aktifkan scroll jika konten modal terlalu panjang */
-      background-color: rgba(0,0,0, 0.6); /* Overlay gelap */
-      /* Gunakan flexbox untuk centering */
-      justify-content: center;
-      align-items: center;
-  }
-  
-  /* Pastikan modal-container terlihat saat modal aktif */
-  /* Aturan ini memastikan display: flex hanya aktif saat JS mengubah display dari none */
-  .modal[style*="display: flex"] {
-      display: flex;
-  }
-  
-  
+  /* Sesuaikan modal container untuk layar lebih besar */
   .modal-container {
-      position: relative;
-      background-color: #fefefe;
-      color: var(--bg);
-      margin: auto; /* Centering */
-      padding: 1.2rem;
-      border: 1px solid #666;
-      width: 90%; /* Lebar responsif */
-      max-width: 500px; /* Lebar maksimum */
-      border-radius: 10px; /* Tambahkan border-radius */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Tambahkan shadow */
-      animation: animateModal 0.5s;
+    max-width: 600px;
   }
-  
-  .modal-container .close-item {
-      position: absolute;
-      top: 1rem; /* Posisikan di pojok kanan atas */
-      right: 1rem;
-      font-size: 1.5rem; /* Ukuran ikon close */
-      color: #aaa; /* Warna ikon close */
-      cursor: pointer;
-      transition: 0.3s;
-  }
-  
-  .modal-container .close-item:hover {
-      color: #777; /* Warna ikon close saat hover */
-  }
-  
-  
   .modal-content {
-      display: flex;
-      flex-direction: column; /* Susun konten secara vertikal di mobile */
-      align-items: center; /* Pusatkan konten */
-      text-align: center; /* Pusatkan teks */
+    flex-direction: row; /* Tata letak horizontal di layar besar */
+    text-align: left; /* Teks rata kiri */
+    align-items: flex-start; /* Rata atas */
   }
-  
-  
   .modal-content img {
-      height: 15rem;
-      margin-bottom: 1rem; /* Beri jarak bawah */
-      border-radius: 8px; /* Tambahkan border-radius pada gambar */
-      object-fit: cover; /* Pastikan gambar proporsional */
+    margin-right: 2rem;
+    margin-bottom: 0;
   }
-  
-  .modal-content .product-content {
-      padding: 0 1rem; /* Tambahkan padding */
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
   }
-  
-  .modal-content h3 {
-      font-size: 1.8rem; /* Ukuran judul produk */
-      margin-bottom: 0.5rem;
+  #hamburger-menu {
+    display: inline-block;
   }
-  
-  .modal-content p {
-      font-size: 1rem; /* Ukuran teks deskripsi */
-      line-height: 1.5rem;
-      margin-bottom: 1rem;
-      color: #555; /* Warna teks deskripsi */
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 999; /* Pastikan di atas konten tapi di bawah modal */
   }
-  
-  .modal-content .product-stars {
-      font-size: 1.5rem; /* Ukuran bintang */
-      color: gold; /* Warna bintang */
-      margin-bottom: 1rem;
+  .navbar .navbar-nav.active {
+    right: 0;
   }
-  
-  .modal-content .product-stars .star-full {
-      fill: gold; /* Isi bintang yang penuh */
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
   }
-  
-  .modal-content .product-price {
-      font-size: 1.2rem; /* Ukuran harga */
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      color: var(--bg);
+
+  .menu p {
+    font-size: 1.2rem;
   }
-  
-  .modal-content .product-price span {
-      text-decoration: line-through;
-      font-weight: lighter;
-      font-size: 0.9rem;
-      color: #888; /* Warna harga coret */
-  }
-  
-  
-  .modal-content a { /* Gaya untuk tombol 'Add to cart' di modal */
-      display: flex;
-      gap: 0.5rem; /* Kurangi jarak ikon dan teks */
-      align-items: center; /* Pusatkan ikon dan teks */
-      justify-content: center; /* Pusatkan konten tombol */
-      width: auto; /* Lebar otomatis sesuai konten */
-      background-color: var(--primary);
-      color: #fff;
-      padding: 0.8rem 1.5rem; /* Sesuaikan padding */
-      border-radius: 5px; /* Tambahkan border-radius */
-      transition: 0.3s;
-  }
-  
-  .modal-content a:hover {
-      background-color: #a0784c; /* Warna hover */
-  }
-  
-  
-  /* modal animation */
-  @keyframes animateModal {
-      from {
-          top: -300px;
-          opacity: 0;
-      }
-  
-      to {
-          top: 0;
-          opacity: 1;
-      }
-  }
-  
-  /* media queriies */
-  
-  /* laptop */
-  @media (max-width: 1366px) {
-      html {
-          font-size: 75%;
-      }
-      /* Sesuaikan modal container untuk layar lebih besar */
-      .modal-container {
-          max-width: 600px;
-      }
-      .modal-content {
-          flex-direction: row; /* Tata letak horizontal di layar besar */
-          text-align: left; /* Teks rata kiri */
-          align-items: flex-start; /* Rata atas */
-      }
-       .modal-content img {
-          margin-right: 2rem;
-          margin-bottom: 0;
-       }
-  }
-  
-  /* tablet */
-  @media (max-width: 768px) {
-      html {
-          font-size: 62.5%;
-      }
-      #hamburger-menu {
-          display: inline-block;
-      }
-  
-      .navbar .navbar-nav {
-          position: absolute;
-          top: 100%;
-          right: -100%;
-          background-color: white;
-          width: 30rem;
-          height: 100vh;
-          transition: 0.3s;
-          z-index: 999; /* Pastikan di atas konten tapi di bawah modal */
-      }
-      .navbar .navbar-nav.active {
-          right: 0;
-      }
-  
-      .navbar .navbar-nav a {
-          color: var(--bg);
-          display: block;
-          margin: 1.5rem;
-          padding: 0.5rem;
-          font-size: 2rem;
-      }
-  
-      .menu p {
-          font-size: 1.2rem;
-      }
-  
-  
+
   .about .row {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  
+
   .about .row .about-img img {
-      height: 55rem;
-      object-fit: cover;
-      object-position: center;
+    height: 55rem;
+    object-fit: cover;
+    object-position: center;
   }
-  
+
   .about .row .content {
-      padding: 0;
+    padding: 0;
   }
   .about .row .content h3 {
-      margin-top: 1rem;
-      font-size: 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
   }
-  
+
   .about .row .content p {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
-  
+
   .contact .row .map {
-      height: 30rem;
+    height: 30rem;
   }
-  
+
   .contact .row form {
-      padding-top: 0;
+    padding-top: 0;
   }
-  
+
   .navbar .search-form {
-      width: 90%;
-      right: 2rem;
+    width: 90%;
+    right: 2rem;
   }
-  
-      /* Sesuaikan modal content untuk tablet */
-      .modal-content {
-          flex-direction: column; /* Kembali ke vertikal di tablet */
-          align-items: center;
-          text-align: center;
-      }
-      .modal-content img {
-          margin-right: 0;
-          margin-bottom: 1rem;
-      }
-  
+
+  /* Sesuaikan modal content untuk tablet */
+  .modal-content {
+    flex-direction: column; /* Kembali ke vertikal di tablet */
+    align-items: center;
+    text-align: center;
   }
-  /* mobile */
-  @media (max-width: 500px) {
-      html {
-          font-size: 55%;
-      }
-      .contact .row {
-      flex-wrap: wrap}
-      .contact .row .map {
-          height: 30rem;
-      }
-  
-      .contact .row form {
-          padding-top: 0;
-      }
-  
-      /* Sesuaikan modal container untuk mobile */
-      .modal-container {
-          width: 95%;
-          padding: 1rem;
-      }
-      .modal-content img {
-          height: 12rem; /* Ukuran gambar lebih kecil di mobile */
-      }
-      .modal-content h3 {
-          font-size: 1.5rem;
-      }
-      .modal-content p {
-          font-size: 0.9rem;
-      }
-      .modal-content a {
-          padding: 0.6rem 1rem;
-          font-size: 1rem;
-      }
+  .modal-content img {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
+}
+/* mobile */
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  /* Sesuaikan modal container untuk mobile */
+  .modal-container {
+    width: 95%;
+    padding: 1rem;
+  }
+  .modal-content img {
+    height: 12rem; /* Ukuran gambar lebih kecil di mobile */
+  }
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+  .modal-content a {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+}
